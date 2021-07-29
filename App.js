@@ -5,18 +5,23 @@ const dispalyResult = document.getElementById("result-wrapper");
 const resultBackground = document.getElementById("resultcontainer");
 const resultInText = document.getElementById("resultshow");
 const closeResult = document.getElementById("close");
+const addBg = document.getElementById("result-wrapper");
 let userDOBsum;
 let userLuckyNumber;
 const checkLucky = (DOBsum, LuckyNum) => {
   if (DOBsum % LuckyNum === 0) {
     console.log("lucky");
     resultInText.innerHTML = "Your Birthday is A Lucky Number !!!";
-    resultBackground.style.backgroundImage =
-      "url('https://media.giphy.com/media/PMV7yRpwGO5y9p3DBx/giphy.gif')";
-  } else {
-    resultInText.innerHTML = "Your Birthday is Not A Lucky Number !!!";
 
     resultBackground.style.backgroundImage =
+      "url('https://media.giphy.com/media/W2Fbe4nWDJIWvoubaR/giphy.gif')";
+    addBg.style.backgroundImage =
+      "url('https://media.giphy.com/media/PmSQHu3vBiWG5CbUZh/giphy.gif')";
+  } else {
+    resultInText.innerHTML = "Your Birthday is Not A Lucky Number !!!";
+    resultBackground.style.backgroundImage =
+      "url('https://media.giphy.com/media/lSzQjkthGS1gc/giphy.gif')";
+    addBg.style.backgroundImage =
       "url('https://media.giphy.com/media/lSzQjkthGS1gc/giphy.gif')";
   }
 };
